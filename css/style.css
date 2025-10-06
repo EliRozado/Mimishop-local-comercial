@@ -9,6 +9,7 @@
     --color-titulos: #FF73A6;
     --color-footer: #413f3F;
     --color-fondo-seccion: #f6f6f6;
+    --color-bordes: #D9D9D9;
 }
 
 *{ margin: 0; padding: 0; }
@@ -150,3 +151,122 @@ footer{
 
 .categoria-boton img{ height: 200px; width: auto; object-fit: contain; border-radius: 150px;}
 .categoria-boton p{font-size: 20px;}
+
+.main-texto{
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.main-texto div{ display: flex; flex-direction: column; gap: 25px; justify-content: center;}
+
+.main-texto img{ width: 165px;}
+
+.form-contacto{
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border: 1px solid var(--color-bordes);
+    padding: 24px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.form-contacto div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.form-100{ width: 100%; }
+
+.form-100 input, .form-100 textarea{
+    padding: 8px;
+    border: 1px solid var(--color-bordes);
+    border-radius: 4px;
+}
+
+.boton-enviar{
+    background-color: var(--color-botones_acentos);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-fondo);
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    align-self: flex-end;
+}
+
+.boton-enviar:hover{
+    background-color: var(--color-botones_hover);
+}
+
+@media screen and (max-width: 768px) {
+    .index-main{
+        flex-direction: row;
+        height: auto;
+        padding: 20px;
+    }
+
+    h2{ font-size: 20px; }
+
+    .texto-principal h1{ font-size: 30px; }
+
+    .texto-principal p{ font-size: 14px; }
+
+    .index-main img{ height: 300px; }
+
+    .texto-principal{
+        padding-left: 0px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-cont{ padding: 40px 60px; }
+
+    .categoria-boton{ height: 150px; }
+    .categoria-boton img{ height: 150px; width: auto; object-fit: contain; border-radius: 150px;}
+    .categoria-boton p{font-size: 15px;}
+
+    .main-texto{
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    footer{ gap: 60px;}
+
+    .form-contacto{ width: 80%; align-self: center;}
+    .form-100{ text-align: left; }
+}
+
+@media screen and (max-width: 480px) {
+    .logo{ height: 65px; }
+    
+    .nav-sitio ul{ flex-direction: column; gap: 10px; }
+
+    .nav-sitio li a{ font-size: 14px; } 
+    
+    .index-main{ flex-direction: column; height: auto; padding: 40px 20px;}
+    
+    .index-main img{ height: 250px; }
+
+    h1{ font-size: 25px; }
+
+    .boton{ font-size: 14px; }
+    
+    footer{ 
+        padding: 30px; 
+        gap: 30px; 
+        flex-wrap: wrap; 
+        flex-direction: column; 
+        justify-content: center;
+        font-size: 12px;
+        text-align: center;
+    }
+}
